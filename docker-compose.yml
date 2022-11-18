@@ -7,6 +7,7 @@ services:
     - 80:80
     links:
     - php
+    - mariadb
     volumes:
     - ./www/html/:/var/www/html/
 
@@ -16,4 +17,20 @@ services:
     expose:
       - 9000
     volumes:
-      - ./www/html/:/var/www/html/
+      - ./www/html:/var/www/html
+  
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    restart: always
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: username
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: wordpress
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"

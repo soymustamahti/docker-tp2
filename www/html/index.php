@@ -1,9 +1,17 @@
-<!DOCTYPE html>  
-     <head>  
-      <title>This is  wordpress from MUSTA!</title>
-     </head>  
+<?php
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
 
-     <body>  
-      <h1>This is  wordpress from MUSTA!</h1>
-      <p><?php echo 'We are running PHP, version: ' . phpversion(); ?></p>
-     </body>
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define( 'WP_USE_THEMES', true );
+
+/** Loads the WordPress Environment and Template */
+require __DIR__ . '/wp-blog-header.php';
