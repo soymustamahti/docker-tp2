@@ -7,7 +7,7 @@
 
 <img src="./example.png" alt="html folder" width="300"/>
 
-5. lLncer :
+5. Lancer :
         ``` 
         docker-compose up -d 
         ```
