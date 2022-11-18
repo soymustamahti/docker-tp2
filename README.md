@@ -13,6 +13,3 @@
         ```
 6. Allez à http://localhost
 7. Enjoy
-8. Si vous voulez utiliser la base de données, vous renommé le ficher `wp-config-sample.php` a `wp-config.php` et utiliser les données d'environnement du service mariadb (dans le docker-compose.yml)
-
-## Le point 8 n'est pas nécessaire
