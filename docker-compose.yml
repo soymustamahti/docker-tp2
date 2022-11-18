@@ -12,7 +12,7 @@ services:
     - ./www/html/:/var/www/html/
 
   php:
-    image: php:7.0-fpm
+    build: ./php/
     container_name: php-container
     expose:
       - 9000
