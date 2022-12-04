@@ -13,3 +13,9 @@
         ```
 6. Allez à http://localhost
 7. Enjoy
+
+### PD: Pour se connecter correctement à la base de données à partir de wordpres, vous devez placer les données de la façon suivante 
+
+<img src="./example_one.png" alt="html folder" width="500"/>
+
+Dans le host nous ne mettons pas localhost, mais le nom du conteneur où nous avons mariadb car il se réfère à l'ip où il est exécuté.
