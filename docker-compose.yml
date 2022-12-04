@@ -5,10 +5,10 @@ services:
     container_name: nginx-container
     ports:
       - 80:80
-    links:
-      - php
     volumes:
       - ./www/html/:/var/www/html/
+    networks:
+      - wordpress
 
   php:
     build: ./php/
@@ -17,8 +17,8 @@ services:
       - 9000
     volumes:
       - ./www/html:/var/www/html
-    links:
-      - mariadb
+    networks:
+      - wordpress
   
   mariadb:
     container_name: mariadb
@@ -31,7 +31,11 @@ services:
       MYSQL_USER: username
       MYSQL_PASSWORD: password
       MYSQL_DATABASE: wordpress
-    expose:
-      - "3306"
     ports:
       - "3306:3306"
+    networks:
+      - wordpress
+
+networks:
+  wordpress:
+    name: wordpress
