@@ -9,7 +9,7 @@
 
 5. Lancer :
         ``` 
-        docker-compose up -d 
+        docker compose up -d 
         ```
 6. Allez à http://localhost
 7. Enjoy
